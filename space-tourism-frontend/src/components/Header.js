@@ -3,12 +3,22 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header>
+        <header className="primary-header">
             <nav>
-                <Link to="/home" className='txt-white'>00 Home</Link>
-                <a href='#' className='txt-white'>01 Destination</a>
-                <a href='#' className='txt-white'>02 Crew</a>
-                <a href='#' className='txt-white'>03 Technology</a>
+                <ul>
+                    <li>
+                        <Link to="/" className='txt-white'><span>00</span>Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/" className='txt-white'><span>01</span>Destination</Link>
+                    </li>
+                    <li>
+                        <Link to="/" className='txt-white'><span>02</span>Crew</Link>
+                    </li>
+                    <li>
+                        <Link to="/" className='txt-white'><span>03</span>Technology</Link>
+                    </li>
+                </ul>
             </nav>
         </header>
     );

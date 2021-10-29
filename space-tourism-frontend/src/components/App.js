@@ -11,12 +11,12 @@ function App() {
       
       <Switch>
 
-        <Route path="/home">
+        <Route exact path="/">
           <Home />  
         </Route>
 
       </Switch>
-      
+
       <h1>Hello from React</h1>
 
     </div>
