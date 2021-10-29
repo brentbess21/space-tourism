@@ -5,18 +5,18 @@ const Header = () => {
     return (
         <header className="primary-header">
             <nav>
-                <ul>
+                <ul className="primary-navigation underline-indicators flex">
                     <li>
-                        <Link to="/" className='txt-white'><span>00</span>Home</Link>
+                        <Link to="/" className="txt-white uppercase letter-spacing-2"><span>00</span>Home</Link>
                     </li>
                     <li>
-                        <Link to="/" className='txt-white'><span>01</span>Destination</Link>
+                        <Link to="/" className="txt-white uppercase letter-spacing-2"><span>01</span>Destination</Link>
                     </li>
                     <li>
-                        <Link to="/" className='txt-white'><span>02</span>Crew</Link>
+                        <Link to="/" className="txt-white uppercase letter-spacing-2"><span>02</span>Crew</Link>
                     </li>
                     <li>
-                        <Link to="/" className='txt-white'><span>03</span>Technology</Link>
+                        <Link to="/" className="txt-white uppercase letter-spacing-2"><span>03</span>Technology</Link>
                     </li>
                 </ul>
             </nav>
