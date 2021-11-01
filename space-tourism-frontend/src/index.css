@@ -9,7 +9,7 @@
     --clr-white: 0 0% 100%;
   
     /* font-sizes */
-    --fs-900: 9.375rem;
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);    
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
@@ -79,9 +79,6 @@ body {
     background-color: hsl(var(--clr-dark));
     line-height: 1.5;
     min-height: 100vh;
-
-    display: grid;
-    grid-template-rows: min-content 1fr;
 }
 
 /* make images easier to work with */
@@ -114,6 +111,7 @@ select {
   }
 }
 
+
 /* ----------------------- */
 /* Utility Classes         */
 /* ----------------------- */
@@ -133,16 +131,18 @@ select {
 .grid-container {
     display: grid;
     text-align: center;
-    border: 5px solid limegreen;
     place-items: center;
     padding-inline: 1rem;
+    min-width: 100vw;
+    min-height: 100vh;
+
 }
 
 .grid-container * {
     max-width: 50ch;
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 45em) {
     .grid-container {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
@@ -151,16 +151,14 @@ select {
     
     .grid-container > *:first-child {
         grid-column: 2;
-        outline: 1px solid red;
     }
 
     .grid-container > *:last-child {
         grid-column: 3;
-        outline: 1px solid yellow;
     }
 
     .grid-container--home {
-        padding-bottom: max(6rem, 20vh);
+        padding-bottom: max(8rem, 20vh);
         align-items: end;
     }
 }
@@ -249,6 +247,20 @@ select {
 /* Components              */
 /* ----------------------- */
 
+/* General  */
+
+.component-body {
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: hsl(var(--clr-white));
+    background-color: hsl(var(--clr-dark));
+    line-height: 1.5;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+
 /* Header */
  
 .primary-navigation {
@@ -293,16 +305,18 @@ select {
     background-image: url(./assets/home/background-home-mobile.jpg);
     background-size: cover;
     background-position: bottom center;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
-@media (min-width: 35rem) {
+@media (min-width: 35em) {
     .home {
         background-position: center center;
         background-image: url(./assets/home/background-home-tablet.jpg);
     }
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 45em) {
     .home {
         background-image: url(./assets/home/background-home-desktop.jpg);
     }
