@@ -7,8 +7,9 @@ const Header = () => {
             <div>
                 <img src='./../../assets/shared/logo.svg' alt='space tourism logo' />
             </div>
+            <button className='mobile-nav-toggle' aria-controls='primary-navigation'><span className='sr-only' aria-expanded='false'>Menu</span></button>
             <nav>
-                <ul className="primary-navigation underline-indicators flex">
+                <ul id="primary-navigation" className="primary-navigation underline-indicators flex">
                     <li>
                         <Link to="/" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>00</span>Home</Link>
                     </li>
