@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Header from './Header';
+
 const Home = () => {
+
     return (
         <div className='home component-body'>
+            <Header /> 
             <div className= 'grid-container grid-container--home'>
                 <div>
                     <h1 className='fs-500 txt-light uppercase ff-sans-cond letter-spacing-1'>So, you want to travel to <span className='fs-900 txt-white ff-serif display-block'>Space</span></h1>

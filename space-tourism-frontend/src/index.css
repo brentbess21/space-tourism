@@ -268,10 +268,19 @@ select {
     list-style: none;
     padding: 0;
     margin: 0;
-    background: hsl( var(--clr-white) / .1);
-    backdrop-filter: blur(1.25rem);
+    background: hsl( var(--clr-dark) / .95);
 }
 
+@supports (backdrop-filter: blur(1.25rem)) {
+    .primary-navigation {
+        background: hsl( var(--clr-white) / .1);
+        backdrop-filter: blur(1.25rem);
+    }
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
 @media (max-width: 35rem) {
     .primary-navigation {
         --underline-gap: .5rem;
@@ -282,9 +291,29 @@ select {
         padding: min(20rem, 15vh) 3rem;
         margin: 0;
         flex-direction: column;
+        transform: translateX(100%);
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
     }
 
     .primary-navigation.underline-indicators > .active {
+        border: 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: none;
+        background-image: url(./assets/shared/icon-close.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 1rem;
+        aspect-ratio: 1;
         border: 0;
     }
 }

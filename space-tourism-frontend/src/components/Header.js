@@ -2,14 +2,26 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
+    const clickHandler = () => {
+        const nav = document.querySelector('.primary-navigation')
+        const visibility = nav.getAttribute('data-visible')
+
+        if(visibility === 'true') {
+            nav.setAttribute('data-visible', 'false')
+        } else if (visibility === 'false') {
+            nav.setAttribute('data-visible', 'true')
+        }  
+    }
+
     return (
         <header className="primary-header flex">
             <div>
                 <img src='./../../assets/shared/logo.svg' alt='space tourism logo' />
             </div>
-            <button className='mobile-nav-toggle' aria-controls='primary-navigation'><span className='sr-only' aria-expanded='false'>Menu</span></button>
+            <button className='mobile-nav-toggle' aria-controls='primary-navigation' onClick={clickHandler}><span className='sr-only' aria-expanded='false'>Menu</span></button>
             <nav>
-                <ul id="primary-navigation" className="primary-navigation underline-indicators flex">
+                <ul id="primary-navigation" data-visible="false" className="primary-navigation underline-indicators flex">
                     <li>
                         <Link to="/" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>00</span>Home</Link>
                     </li>
