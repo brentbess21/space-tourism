@@ -5,12 +5,15 @@ const Header = () => {
 
     const clickHandler = () => {
         const nav = document.querySelector('.primary-navigation')
+        const button = document.querySelector('.mobile-nav-toggle')
         const visibility = nav.getAttribute('data-visible')
 
         if(visibility === 'true') {
             nav.setAttribute('data-visible', 'false')
+            button.style.backgroundImage = 'url(./assets/shared/icon-hamburger.svg)'
         } else if (visibility === 'false') {
             nav.setAttribute('data-visible', 'true')
+            button.style.backgroundImage = "url(./assets/shared/icon-close.svg)"
         }  
     }
 
