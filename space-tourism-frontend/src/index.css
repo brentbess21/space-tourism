@@ -243,6 +243,10 @@ select {
     color: hsl( var(--clr-white) / .25);
 }
 
+.no-decoration {
+    text-decoration: none;
+}
+
 /* ----------------------- */
 /* Components              */
 /* ----------------------- */
@@ -447,3 +451,19 @@ select {
     opacity: 1;
     transform: scale(1.5);
 }
+
+
+/* Destinations */
+
+
+/* Sub Header */
+
+.tab-list {
+    --gap: 2rem;
+}
+
+
+
+
+
+
