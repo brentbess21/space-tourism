@@ -29,7 +29,7 @@ const Header = () => {
                         <Link to="/" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>00</span>Home</Link>
                     </li>
                     <li>
-                        <Link to="/" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>01</span>Destination</Link>
+                        <Link to="/destinations" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>01</span>Destination</Link>
                     </li>
                     <li>
                         <Link to="/" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>02</span>Crew</Link>

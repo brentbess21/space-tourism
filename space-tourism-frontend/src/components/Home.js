@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div className='home component-body'>
             <Header /> 
-            <div className= 'grid-container grid-container--home'>
+            <main className= 'grid-container grid-container--home'>
                 <div>
                     <h1 className='fs-500 txt-light uppercase ff-sans-cond letter-spacing-1'>So, you want to travel to <span className='fs-900 txt-white ff-serif display-block'>Space</span></h1>
 
@@ -19,7 +19,7 @@ const Home = () => {
                 <div>
                     <Link to='/' className='large-button uppercase ff-serif text-dark bg-white'>Explore</Link>
                 </div>
-            </div>
+            </main>
         </div>
     );
 }
