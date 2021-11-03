@@ -34,7 +34,7 @@
     }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 50em) {
     :root {
         /* font-sizes */
         --fs-800: 6.25rem;
@@ -142,7 +142,7 @@ select {
     max-width: 50ch;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 50em) {
     .grid-container {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
@@ -262,8 +262,18 @@ select {
 }
 
 /* Header */
+
+.logo {
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+}
  
 .primary-navigation {
+    --gap: clamp(2rem, 5vw, 3.5rem);
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
@@ -278,10 +288,20 @@ select {
     }
 }
 
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a > span {
+    font-weight: 700;
+    margin-right: .5em;
+}
+
 .mobile-nav-toggle {
     display: none;
 }
-@media (max-width: 35rem) {
+
+@media (max-width: 35em) {
     .primary-navigation {
         --underline-gap: .5rem;
         position: fixed;
@@ -319,13 +339,41 @@ select {
     }
 }
 
-.primary-navigation a {
-    text-decoration: none;
+@media (min-width: 35em) {
+    .primary-navigation {
+        padding-inline: clamp(3rem, 7vw, 7rem);
+    }
 }
 
-.primary-navigation a > span {
-    font-weight: 700;
-    margin-right: .5em;
+@media (min-width: 35em) and (max-width: 50em) {
+    .primary-navigation {
+        padding-inline: 3rem;
+    }
+    
+    .primary-navigation a > span {
+        display: none;
+    }
+}
+
+@media (min-width: 50em) {
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: 100%;
+        margin-right: -2.5rem;
+        background: hsl( var(--clr-white) / .25);
+        order: 1;
+    }
+    
+   nav {
+       order: 2;
+   }
+   
+   .primary-navigation {
+       margin-block: 2rem;
+   }
 }
 
 .underline-indicators > * {
@@ -364,7 +412,7 @@ select {
     }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 50em) {
     .home {
         background-image: url(./assets/home/background-home-desktop.jpg);
     }

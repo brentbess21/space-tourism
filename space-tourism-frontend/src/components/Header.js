@@ -20,7 +20,7 @@ const Header = () => {
     return (
         <header className="primary-header flex">
             <div>
-                <img src='./../../assets/shared/logo.svg' alt='space tourism logo' />
+                <img className='logo' src='./../../assets/shared/logo.svg' alt='space tourism logo' />
             </div>
             <button className='mobile-nav-toggle' aria-controls='primary-navigation' onClick={clickHandler}><span className='sr-only' aria-expanded='false'>Menu</span></button>
             <nav>
