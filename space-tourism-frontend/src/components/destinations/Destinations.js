@@ -10,11 +10,13 @@ const Destinations = () => {
     return(
         <div className='destinations component-body'>
              <Header />
+
             <div className= 'grid-container grid-container--destination'>
                 <h1 className='numbered-title'><span className=''>01</span>Pick your destination</h1>
                 <SubHeader />
                 <Moon />
             </div>
+            
         </div>
     )
 }
