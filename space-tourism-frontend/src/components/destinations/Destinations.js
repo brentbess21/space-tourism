@@ -1,19 +1,27 @@
-import React from 'react';
+import { React, useState } from 'react';
+import data from './../../data/data.json';
 
 import Header from '../Header';
-import Tabs from './Tabs';
 
 // destinations
 import Moon from './Moon';
+import Destination from './Destination';
+
+const destination_data = JSON.parse(JSON.stringify(data.destinations))
+
 
 const Destinations = () => {
+    const [ destinations, setDestinations ] = useState(destination_data)
+    
+
     return(
         <div>
             <Header />
-            <div className='destinations component-body flow'>
-                <h1 className='numbered-title'><span className=''>01</span>Pick your destination</h1>
-                <Moon />
-             </div>
+            
+            {destinations.map(destination => {
+                return <Destination destination={destination} key={destination.name}/>
+            })}
+             
         </div>
     )
 }
