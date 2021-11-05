@@ -9,9 +9,9 @@ const Tabs = (props) => {
     console.log("Destination:" , destination)
     return (
         <div>
-            <nav className='tab-list underline-indicators flex'>
+            <div className='tab-list underline-indicators flex'>
             
-                { destination ? 
+                {/* { destination ? 
                 destination.map(dest => {
                     return <Link to={`/destinations/${dest.name}`}  className="uppercase ff-sans-cond txt-light bg-dark letter-spacing-2 no-decoration" key={dest.name}>{dest.name}</Link>
 
@@ -19,9 +19,10 @@ const Tabs = (props) => {
                 destinations.map(dest => {
                     return <Link to={`/destinations/${dest.name}`}  className="uppercase ff-sans-cond txt-light bg-dark letter-spacing-2 no-decoration" key={dest.name}>{dest.name}</Link>
                 
-                })}
-                
-            </nav>
+                })} */}
+
+
+            </div>
 
         
         </div>
