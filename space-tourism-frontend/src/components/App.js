@@ -1,21 +1,34 @@
-import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom'
+import { React, useState } from 'react';
+import { Switch, Route } from 'react-router-dom'
+
+import data from './../data/data.json'
 
 import Home from './Home';
-import Destinations from './destinations/Destinations';
+import Tabs from './destinations/Tabs';
+import Destination from './destinations/Destination';
+
+const destination_data = JSON.parse(JSON.stringify(data.destinations));
 
 
 function App() {
+  
+  const [ destinations, setDestinations ] = useState(destination_data)
+
+  console.log("From app", destinations)
   return (
     <div className="App">
       <Switch>
 
-        <Route exact path="/">
-          <Home />  
+        <Route path='/destinations/:destinationName'>
+          <Destination destinations={destinations} />
         </Route>
 
-        <Route>
-          <Destinations path="/destinations" />
+        <Route path="/destinations">
+          <Tabs destinations={destinations} />
+        </Route>
+
+        <Route exact path="/">
+          <Home />  
         </Route>
 
       </Switch>
