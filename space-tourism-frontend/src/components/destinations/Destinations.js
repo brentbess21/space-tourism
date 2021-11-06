@@ -1,23 +1,23 @@
 import { React, useState } from 'react';
-import data from './../../data/data.json';
+import { Link } from 'react-router-dom';
 
 import Header from '../Header';
-
-// destinations
-import Destination from './Destination';
 
 
 
 const Destinations = (props) => {    
 
     return(
-        <div>
-            {/* <Header />
-            
-            {destinations.map(destination => {
-                return <Destination destination={destination} key={destination.name}/>
-            })} */}
-             
+        <div className="destinations-landing-page destinations">
+            <Header />
+            <h1 className="numbered-title"><span>01</span> Pick your destination</h1>
+
+            <div class="tab-list underline-indicators flex">
+                    <Link to={`/destinations/Moon`}  className="uppercase ff-sans-cond txt-light bg-dark letter-spacing-2 no-decoration" >Moon</Link>
+                    <Link to={`/destinations/Mars`}  className="uppercase ff-sans-cond txt-light bg-dark letter-spacing-2 no-decoration" >Mars</Link>
+                    <Link to={`/destinations/Europa`}  className="uppercase ff-sans-cond txt-light bg-dark letter-spacing-2 no-decoration" >Europa</Link>
+                    <Link to={`/destinations/Titan`}  className="uppercase ff-sans-cond txt-light bg-dark letter-spacing-2 no-decoration" >Titan</Link>
+                </div>
         </div>
     )
 }

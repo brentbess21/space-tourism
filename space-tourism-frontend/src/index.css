@@ -533,6 +533,27 @@ select {
 
 /* Destinations */
 
+.destinations {
+    background-image: url(./assets/destination/background-destination-mobile.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+@media (min-width: 35em) {
+    .destinations {
+        background-position: center center;
+        background-image: url(./assets/destination/background-destination-tablet.jpg);
+    }
+}
+
+@media (min-width: 50em) {
+    .destinations {
+        background-image: url(./assets/destination/background-destination-desktop.jpg);
+    }
+}
+
 
 /* Sub Header */
 

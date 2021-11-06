@@ -17,7 +17,7 @@ const Destination = (props) => {
     console.log(destination)
 
     return (
-       <div>
+       <div className='destinations component-body'>
         <Header />
         <main id="main" class="grid-container grid-container--destination flow">
                 <h1 className="numbered-title"><span>01</span> Pick your destination</h1>

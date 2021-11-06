@@ -6,6 +6,8 @@ import data from './../data/data.json'
 import Home from './Home';
 import Tabs from './destinations/Tabs';
 import Destination from './destinations/Destination';
+import Destinations from './destinations/Destinations';
+import CrewMember from './crew/CrewMember';
 
 const destination_data = JSON.parse(JSON.stringify(data.destinations));
 
@@ -19,12 +21,16 @@ function App() {
     <div className="App">
       <Switch>
 
+        <Route path='/crew'>
+          <CrewMember />
+        </Route>
+
         <Route path='/destinations/:destinationName'>
           <Destination destinations={destinations} />
         </Route>
 
         <Route path="/destinations">
-          <Tabs destinations={destinations} />
+          <Destinations />
         </Route>
 
         <Route exact path="/">
