@@ -8,6 +8,12 @@ const CrewMember = () => {
             <Header />
             <main id="main" class="grid-container grid-container--crew flow">
                 <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
+                <div class="dot-indicators flex">
+                    <button aria-selected="true"><span class="sr-only">The co</span></button>
+                    <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                    <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                    <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                </div>
 
                 <article class="crew-details">
                     <h2 class="fs-600 ff-serif uppercase">Commander</h2>

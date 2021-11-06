@@ -24,10 +24,10 @@ const Destination = (props) => {
                 <img src={destination.images.png} alt={destination.name} />
 
                 <div class="tab-list underline-indicators flex">
-                    <Link to={`/destinations/Moon`}  className="uppercase ff-sans-cond txt-light bg-dark letter-spacing-2 no-decoration" >Moon</Link>
-                    <Link to={`/destinations/Mars`}  className="uppercase ff-sans-cond txt-light bg-dark letter-spacing-2 no-decoration" >Mars</Link>
-                    <Link to={`/destinations/Europa`}  className="uppercase ff-sans-cond txt-light bg-dark letter-spacing-2 no-decoration" >Europa</Link>
-                    <Link to={`/destinations/Titan`}  className="uppercase ff-sans-cond txt-light bg-dark letter-spacing-2 no-decoration" >Titan</Link>
+                    <Link to={`/destinations/Moon`}  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Moon</Link>
+                    <Link to={`/destinations/Mars`}  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Mars</Link>
+                    <Link to={`/destinations/Europa`}  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Europa</Link>
+                    <Link to={`/destinations/Titan`}  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Titan</Link>
                 </div>
 
                 
