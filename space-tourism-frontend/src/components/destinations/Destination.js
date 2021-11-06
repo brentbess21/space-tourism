@@ -21,7 +21,7 @@ const Destination = (props) => {
         <Header />
         <main id="main" class="grid-container grid-container--destination flow">
                 <h1 className="numbered-title"><span>01</span> Pick your destination</h1>
-                <img src={destination.images.webp} alt={destination.name} />
+                <img src={destination.images.png} alt={destination.name} />
 
                 <div class="tab-list underline-indicators flex">
                     <Link to={`/destinations/Moon`}  className="uppercase ff-sans-cond txt-light bg-dark letter-spacing-2 no-decoration" >Moon</Link>

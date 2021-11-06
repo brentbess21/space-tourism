@@ -554,6 +554,13 @@ select {
     }
 }
 
+.destinations-landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Sub Header */
 
