@@ -9,10 +9,10 @@ const CrewMember = () => {
             <main id="main" class="grid-container grid-container--crew flow">
                 <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
                 <div class="dot-indicators flex">
-                    <button aria-selected="true"><span class="sr-only">The co</span></button>
-                    <button aria-selected="false"><span class="sr-only">Slide title</span></button>
-                    <button aria-selected="false"><span class="sr-only">Slide title</span></button>
-                    <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                    <button aria-selected="true"><span class="sr-only">The commander</span></button>
+                    <button aria-selected="false"><span class="sr-only">The mission specialist</span></button>
+                    <button aria-selected="false"><span class="sr-only">The pilot</span></button>
+                    <button aria-selected="false"><span class="sr-only">The crew engineer</span></button>
                 </div>
 
                 <article class="crew-details">

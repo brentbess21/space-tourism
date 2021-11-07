@@ -271,6 +271,37 @@ select {
     font-size: 1.75rem;
 }
 
+
+/* Crew Layout */
+
+.grid-container--crew {
+    --flow-space: 2rem;
+    grid-template-areas: 
+        'title'
+        'image'
+        'tabs'
+        'content';
+}
+
+.grid-container--crew > img {
+    grid-area: image;
+    max-width: 70%;
+    border-bottom: 1px solid hsl( var(--clr-white) / .1);
+
+}
+
+.grid-container--crew > .dot-list {
+    grid-area: tabs;
+}
+
+.grid-container--crew > .crew-details {
+    grid-area: content;
+}
+
+
+
+
+
 @media (min-width: 35em) {
     .numbered-title {
         justify-self: start;
@@ -281,10 +312,20 @@ select {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+    .grid-container--crew {
+        padding-bottom: 0;
+        grid-template-areas: 
+            'title'
+            'content'
+            'tabs'
+            'image';
+    }
 }
 
 @media (max-width: 50em) {
-    .grid-container--destination > img {
+    .grid-container--destination > img,
+    .grid-container--crew > img {
         max-width: 45%;
     }
 }
@@ -318,8 +359,20 @@ select {
             '. image content .';
     }
 
-    .grid-container--destination > img {
+    .grid-container--destination > img,
+    .grid-container--crew > img {
         max-width: 90%;
+    }
+
+    .grid-container--crew {
+        grid-template-areas: 
+            '. title title .'
+            '. content image .'
+            '. tabs image .';
+    }
+
+    .grid-container--crew > .dot-indicators {
+        justify-self: start;
     }
 
 }
@@ -568,6 +621,27 @@ select {
 
 
 /* Crew */
+
+.crew {
+    background-image: url(./assets/crew/background-crew-mobile.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+@media (min-width: 35em) {
+    .crew {
+        background-position: center center;
+        background-image: url(./assets/crew/background-crew-tablet.jpg);
+    }
+}
+
+@media (min-width: 50em) {
+    .crew {
+        background-image: url(./assets/crew/background-crew-desktop.jpg);
+    }
+}
 
 .dot-indicators > * {
     cursor: pointer;
