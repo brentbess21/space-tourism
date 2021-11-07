@@ -224,8 +224,8 @@ select {
     place-items: center;
     padding-inline: 1rem;
     min-width: 100vw;
-    min-height: 100vh;
-    padding-bottom: 3rem;
+    min-height: 85vh;
+    padding-bottom: 1rem;
 }
 
 .grid-container * {

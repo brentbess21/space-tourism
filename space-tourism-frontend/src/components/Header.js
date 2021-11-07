@@ -35,7 +35,7 @@ const Header = () => {
                         <Link to="/crew" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>02</span>Crew</Link>
                     </li>
                     <li>
-                        <Link to="/" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>03</span>Technology</Link>
+                        <Link to="/technology" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>03</span>Technology</Link>
                     </li>
                 </ul>
             </nav>

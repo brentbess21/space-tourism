@@ -4,10 +4,10 @@ import { Switch, Route } from 'react-router-dom'
 import data from './../data/data.json'
 
 import Home from './Home';
-import Tabs from './destinations/Tabs';
 import Destination from './destinations/Destination';
 import Destinations from './destinations/Destinations';
 import CrewMember from './crew/CrewMember';
+import Technology from './technology/Technology';
 
 const destination_data = JSON.parse(JSON.stringify(data.destinations));
 
@@ -20,6 +20,10 @@ function App() {
   return (
     <div className="App">
       <Switch>
+
+        <Route path='/technology'>
+          <Technology />
+        </Route>
 
         <Route path='/crew'>
           <CrewMember />
