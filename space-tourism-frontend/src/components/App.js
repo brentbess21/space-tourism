@@ -6,17 +6,19 @@ import data from './../data/data.json'
 import Home from './Home';
 import Destination from './destinations/Destination';
 import Destinations from './destinations/Destinations';
+import Crew from './crew/Crew';
 import CrewMember from './crew/CrewMember';
 import Technology from './technology/Technology';
 
 const destination_data = JSON.parse(JSON.stringify(data.destinations));
+const crew_data = JSON.parse(JSON.stringify(data.crew));
 
 
 function App() {
   
-  const [ destinations, setDestinations ] = useState(destination_data)
+  const [ destinations, setDestinations ] = useState(destination_data);
+  const [ crew, setCrew ] = useState(crew_data);
 
-  console.log("From app", destinations)
   return (
     <div className="App">
       <Switch>
@@ -25,8 +27,12 @@ function App() {
           <Technology />
         </Route>
 
+        <Route path='/crew/:crewRole'>
+          <CrewMember crew={crew} />
+        </Route>
+
         <Route path='/crew'>
-          <CrewMember />
+          <Crew />
         </Route>
 
         <Route path='/destinations/:destinationName'>
@@ -42,7 +48,6 @@ function App() {
         </Route>
 
       </Switch>
-
     </div>
   );
 }

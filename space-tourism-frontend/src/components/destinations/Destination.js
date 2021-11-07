@@ -1,12 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import Header from './../Header';
 
-import data from './../../data/data.json';
-
-const destination_data = JSON.parse(JSON.stringify(data.destinations));
 
 const Destination = (props) => {
     
@@ -14,16 +10,15 @@ const Destination = (props) => {
     const { destinationName } = useParams();
 
     const destination = destinations.find(destination => destination.name === destinationName)
-    console.log(destination)
 
     return (
        <div className='destinations component-body'>
         <Header />
-        <main id="main" class="grid-container grid-container--destination flow">
+        <main id="main" className="grid-container grid-container--destination flow">
                 <h1 className="numbered-title"><span>01</span> Pick your destination</h1>
                 <img src={destination.images.png} alt={destination.name} />
 
-                <div class="tab-list underline-indicators flex">
+                <div className="tab-list underline-indicators flex">
                     <Link to={`/destinations/Moon`}  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Moon</Link>
                     <Link to={`/destinations/Mars`}  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Mars</Link>
                     <Link to={`/destinations/Europa`}  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Europa</Link>
@@ -41,7 +36,7 @@ const Destination = (props) => {
                     <div className="destination-meta flex">
                         <div>
                             <h3 className="txt-light fs-200 uppercase">Avg. distance</h3>
-                            <p classNa me="ff-serif uppercase">{destination.distance}</p>
+                            <p className="ff-serif uppercase">{destination.distance}</p>
                         </div>
                         <div>
                             <h3 className="txt-light fs-200 uppercase">Est. travel time</h3>
