@@ -290,7 +290,7 @@ select {
 
 }
 
-.grid-container--crew > .dot-list {
+.grid-container--crew > .dot-indicators {
     grid-area: tabs;
 }
 
