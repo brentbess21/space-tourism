@@ -47,9 +47,12 @@
 }
 
 
+
+
 /* ------------------ */
 /* Reset              */
 /* ------------------ */
+
 
 /* Box Sizing */
 *,
@@ -114,9 +117,12 @@ select {
 }
 
 
+
+
 /* ----------------------- */
 /* Utility Classes         */
 /* ----------------------- */
+
 
 /* general */
 
@@ -214,9 +220,13 @@ select {
     text-decoration: none;
 }
 
+
+
+
 /* ----------------------- */
 /* Layout                  */
 /* ----------------------- */
+
 
 .grid-container {
     display: grid;
@@ -336,6 +346,9 @@ select {
 
 
 
+
+/* Layout Media Queries  */
+
 @media (min-width: 35em) {
     .numbered-title {
         justify-self: start;
@@ -425,9 +438,6 @@ select {
             '. title title .'
             '. content tabs .'
             '. content image .';
-    }
-
-    .grid-container--tech > .number-indicators {
     }
 
 }
