@@ -22,7 +22,7 @@ const CrewMember = (props) => {
                     <Link to={`/crew/FlightEngineer`}><span className="sr-only" >Flight Engineer</span></Link>
                 </div>
 
-                <article className="crew-details">
+                <article className="crew-details flow">
                     <h2 className="fs-600 ff-serif uppercase">{crewMember.role}</h2>
                     <p className="fs-700 uppercase ff-serif">{crewMember.name}</p>
                     <p>{crewMember.bio}</p>

@@ -236,6 +236,9 @@ select {
     grid-area: title;
 }
 
+
+
+
 /* destination layout */
 
 .grid-container--destination {
@@ -272,6 +275,8 @@ select {
 }
 
 
+
+
 /* Crew Layout */
 
 .grid-container--crew {
@@ -299,6 +304,35 @@ select {
 }
 
 
+
+
+/* Technology Layout */
+
+.grid-container--tech {
+    --flow-space: 2rem;
+    grid-template-areas: 
+        'title'
+        'image'
+        'tabs'
+        'content';
+}
+
+.grid-container--tech > img {
+    grid-area: image;
+    max-width: 80%;
+}
+
+.grid-container--tech > .portrait-img {
+    display: none;
+}
+
+.grid-container--tech > .number-indicators {
+    grid-area: tabs;
+}
+
+.grid-container--tech > .tech-details {
+    grid-area: content;
+}
 
 
 
@@ -363,6 +397,17 @@ select {
     .grid-container--crew > img {
         max-width: 90%;
     }
+    .grid-container--tech > img {
+        max-width: 100%;
+    }
+
+    .grid-container--tech > .landscape-img {
+        display: none;
+    }
+
+    .grid-container--tech > .portrait-img {
+        display: block;
+    }
 
     .grid-container--crew {
         grid-template-areas: 
@@ -375,12 +420,25 @@ select {
         justify-self: start;
     }
 
+    .grid-container--tech {
+        grid-template-areas:
+            '. title title .'
+            '. content tabs .'
+            '. content image .';
+    }
+
+    .grid-container--tech > .number-indicators {
+    }
+
 }
+
+
 
 
 /* ----------------------- */
 /* Components              */
 /* ----------------------- */
+
 
 /* General  */
 
@@ -402,6 +460,9 @@ select {
     justify-content: center;
     align-items: center;
 }
+
+
+
 
 /* Header */
 
@@ -537,6 +598,8 @@ select {
 }
 
 
+
+
 /* Home */
 
 .home {
@@ -591,6 +654,8 @@ select {
 }
 
 
+
+
 /* Destinations */
 
 .destinations {
@@ -618,6 +683,8 @@ select {
     --gap: 2rem;
     margin-bottom: 1.5rem;
 }
+
+
 
 
 /* Crew */
@@ -659,6 +726,40 @@ select {
 .dot-indicators > [aria-selected="true"] {
     background-color: hsl( var(--clr-white) / 1); 
 }
+
+
+
+
+/* Technology */
+
+.number-indicators > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid hsl(var(--clr-white) /.4);
+    border-radius: 50%;
+    padding: .5em;
+    width: 4em;
+    height: 4em;
+    background-color: hsl( var(--clr-dark) / .25);
+    text-decoration: none;
+    color: hsl(var(--clr-white));
+
+}
+
+.number-indicators > *:hover,
+.number-indicators > *:focus { 
+    border: 1px solid hsl( var(--clr-white));
+}
+
+.number-indicators > [aria-selected="true"] {
+    background-color: hsl( var(--clr-white)); 
+    color: hsl(var(--clr-dark));
+}
+
+
+
 
 
 
