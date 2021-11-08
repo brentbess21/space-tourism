@@ -20,7 +20,7 @@ const Technology = (props) => {
     }
 
     return (
-        <div className='technology'>
+        <div className='tech'>
             <Header />
             <main id="main" className="grid-container grid-container--tech flow">
                 <h1 className="numbered-title"><span aria-hidden='true'>03</span>Space launch 101</h1>
