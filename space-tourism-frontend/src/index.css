@@ -238,7 +238,7 @@ select {
     padding-bottom: 1rem;
 }
 
-.grid-container * {
+.grid-container p:not([class]) {
     max-width: 50ch;
 }
 
@@ -349,6 +349,12 @@ select {
 
 /* Layout Media Queries  */
 
+@media (max-width: 35em) {
+   .grid-container--home {
+
+   }
+}
+
 @media (min-width: 35em) {
     .numbered-title {
         justify-self: start;
@@ -451,18 +457,6 @@ select {
 
 
 /* General  */
-
-.component-body {
-    font-family: var(--ff-sans-normal);
-    font-size: var(--fs-400);
-    color: hsl(var(--clr-white));
-    background-color: hsl(var(--clr-dark));
-    line-height: 1.5;
-    min-height: 100vh;
-
-    display: grid;
-    grid-template-rows: min-content 1fr;
-}
 
 .landing-page {
     display: flex;
