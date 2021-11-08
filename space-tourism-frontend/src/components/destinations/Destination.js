@@ -15,7 +15,7 @@ const Destination = (props) => {
        <div className='destinations component-body'>
         <Header />
         <main id="main" className="grid-container grid-container--destination flow">
-                <h1 className="numbered-title"><span>01</span> Pick your destination</h1>
+                <h1 className="numbered-title"><span>01</span> Explore the destinations</h1>
                 <img src={destination.images.png} alt={destination.name} />
 
                 <div className="tab-list underline-indicators flex">

@@ -11,7 +11,7 @@ const Destinations = (props) => {
         <div className="destinations">
             <Header />
             <div className="landing-page">
-                <h1 className="numbered-title"><span>01</span> Pick your destination</h1>
+                <h1 className="numbered-title"><span>01</span> Explore the destinations</h1>
 
                 <div className="tab-list underline-indicators flex">
                         <Link to={`/destinations/Moon`}  className="uppercase ff-sans-cond txt-light  letter-spacing-2 no-decoration" >Moon</Link>
