@@ -7,7 +7,7 @@ const Crew = () => {
     return (
         <div className="crew">
             <Header />
-            <div className="landing-page container">
+            <div className="landing-page container flow">
                 <h1 className="numbered-title"><span>02</span>Meet the crew</h1>
 
                 <div className="tab-list underline-indicators flex">

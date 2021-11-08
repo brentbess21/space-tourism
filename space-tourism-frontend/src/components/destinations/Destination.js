@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 
 import Header from './../Header';
 
-
 const Destination = (props) => {
     
     const { destinations } = props;
@@ -19,10 +18,10 @@ const Destination = (props) => {
                 <img src={destination.images.png} alt={destination.name} />
 
                 <div className="tab-list underline-indicators flex">
-                    <Link to={`/destinations/Moon`}  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Moon</Link>
-                    <Link to={`/destinations/Mars`}  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Mars</Link>
-                    <Link to={`/destinations/Europa`}  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Europa</Link>
-                    <Link to={`/destinations/Titan`}  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Titan</Link>
+                    <Link to={`/destinations/Moon`} aria-selected='false' className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Moon</Link>
+                    <Link to={`/destinations/Mars`} aria-selected='false' className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Mars</Link>
+                    <Link to={`/destinations/Europa`} aria-selected='false'  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Europa</Link>
+                    <Link to={`/destinations/Titan`} aria-selected='false' className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Titan</Link>
                 </div>
 
                 
