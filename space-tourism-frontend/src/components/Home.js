@@ -18,7 +18,7 @@ const Home = (props) => {
                 </div>
 
                 <div>
-                    <Link to='/' className='large-button uppercase ff-serif text-dark bg-white'>Explore</Link>
+                    <Link to='/destinations/Moon' className='large-button uppercase ff-serif text-dark bg-white'>Explore</Link>
                 </div>
                 
             </main>

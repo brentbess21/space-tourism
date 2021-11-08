@@ -2,26 +2,40 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-    
+
+    const clickHandler = (e) => {
+        const nav = document.querySelector('.primary-navigation')
+        const button = document.querySelector('.mobile-nav-toggle')
+        const visibility = nav.getAttribute('data-visible')
+
+        if(visibility === 'true') {
+            nav.setAttribute('data-visible', 'false')
+            button.style.backgroundImage = 'url(./assets/shared/icon-hamburger.svg)'
+        } else if (visibility === 'false') {
+            nav.setAttribute('data-visible', 'true')
+            button.style.backgroundImage = "url(./assets/shared/icon-close.svg)"
+        }  
+    }
+
 
     return (
         <header className="primary-header flex">
             <div>
                 <img className='logo' src='./../../assets/shared/logo.svg' alt='space tourism logo' />
             </div>
-            <button className='mobile-nav-toggle' aria-controls='primary-navigation'><span className='sr-only' aria-expanded='false'>Menu</span></button>
+            <button className='mobile-nav-toggle' aria-controls='primary-navigation' onClick={clickHandler}><span className='sr-only' aria-expanded='false'>Menu</span></button>
             <nav>
                 <ul id="primary-navigation" data-visible="false" className="primary-navigation underline-indicators flex">
-                    <li aria-selected='false'>
+                    <li>
                         <Link to="/" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>00</span>Home</Link>
                     </li>
-                    <li aria-selected='false'> 
+                    <li>
                         <Link to="/destinations/Moon" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>01</span>Destination</Link>
                     </li>
-                    <li aria-selected='false'>
+                    <li>
                         <Link to="/crew/Commander" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>02</span>Crew</Link>
                     </li>
-                    <li aria-selected='false'>
+                    <li>
                         <Link to="/technology/LaunchVehicle" className="txt-white uppercase letter-spacing-2 ff-sans-cond"><span>03</span>Technology</Link>
                     </li>
                 </ul>
