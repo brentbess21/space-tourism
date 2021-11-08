@@ -10,6 +10,17 @@ const Destination = (props) => {
 
     const destination = destinations.find(destination => destination.name === destinationName)
 
+    const selected = (e) => {
+        const targetTab = e.target;
+        const tabList = targetTab.parentNode;
+
+        tabList
+            .querySelector('[aria-selected="true"]')
+            .setAttribute('aria-selected', false)
+
+        targetTab.setAttribute('aria-selected', true)
+    }
+
     return (
        <div className='destinations component-body'>
         <Header />
@@ -18,14 +29,11 @@ const Destination = (props) => {
                 <img src={destination.images.png} alt={destination.name} />
 
                 <div className="tab-list underline-indicators flex">
-                    <Link to={`/destinations/Moon`} aria-selected='false' className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Moon</Link>
-                    <Link to={`/destinations/Mars`} aria-selected='false' className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Mars</Link>
-                    <Link to={`/destinations/Europa`} aria-selected='false'  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Europa</Link>
-                    <Link to={`/destinations/Titan`} aria-selected='false' className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" >Titan</Link>
+                    <Link to={`/destinations/Moon`} aria-selected='true' className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" onClick={selected}>Moon</Link>
+                    <Link to={`/destinations/Mars`} aria-selected='false' className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" onClick={selected} >Mars</Link>
+                    <Link to={`/destinations/Europa`} aria-selected='false'  className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" onClick={selected} >Europa</Link>
+                    <Link to={`/destinations/Titan`} aria-selected='false' className="uppercase ff-sans-cond txt-light letter-spacing-2 no-decoration" onClick={selected} >Titan</Link>
                 </div>
-
-                
-
 
                 <article className="destination-info">
                     <h2 className="fs-800 uppercase ff-serif">{destination.name}</h2>
