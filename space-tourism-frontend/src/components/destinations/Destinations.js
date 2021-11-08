@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Header from '../Header';
 
-const Destinations = (props) => {    
+const Destinations = () => {    
 
     return(
         <div className="destinations">
