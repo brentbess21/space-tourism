@@ -17,9 +17,9 @@ const tech_data = JSON.parse(JSON.stringify(data.technology));
 
 function App() {
   
-  const [ destinations, setDestinations ] = useState(destination_data);
-  const [ crew, setCrew ] = useState(crew_data);
-  const [ tech, setTech ] = useState(tech_data);
+  const [ destinations ] = useState(destination_data);
+  const [ crew ] = useState(crew_data);
+  const [ tech ] = useState(tech_data);
 
   return (
     <div className="App">

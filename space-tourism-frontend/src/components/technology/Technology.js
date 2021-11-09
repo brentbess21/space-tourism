@@ -24,8 +24,8 @@ const Technology = (props) => {
             <Header />
             <main id="main" className="grid-container grid-container--tech flow">
                 <h1 className="numbered-title"><span aria-hidden='true'>03</span>Space launch 101</h1>
-                <img src={technology.images.landscape} className='landscape-img'/>
-                <img src={technology.images.portrait} alt='space capsule' className='portrait-img' />
+                <img src={technology.images.landscape} alt={technology.name} className='landscape-img'/>
+                <img src={technology.images.portrait} alt={technology.name} className='portrait-img' />
                 <div className="number-indicators flex">
                     <Link to='/technology/LaunchVehicle' aria-selected='true' onClick={selected}>1</Link>
                     <Link to='/technology/Spaceport' aria-selected='false' onClick={selected}>2</Link>
